@@ -1,81 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La cocina de Sergio</title>
-    <link href="./css/style.css" rel="stylesheet">
+
     <link rel="icon" href=".\imgs\logo.jpg" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/31818fb38f.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./css/style.css" rel="stylesheet">
+
+   
 </head>
-<body>
-    <header>
-        <nav>
+
+<body class="grid-container">
+    <header class="navbar-area">
+        <nav class="nav">
             <a href="index.html">Inicio</a>
             <a href="acerca.htm">Acerca</a>
             <a href="contacto.html">Contacto</a>
             <a href="registrarse.htm">Registrarse</a>
             <a href="sucursales.html">Sucursales</a>
-            
         </nav>
-        <h1 >La cocina de Sergio</h1>
+        <img class="logo" src=".\imgs\pizza napolitana.jpg">
+        <i class="icon-menu"></i>
+
+        <h1>La cocina de Sergio</h1>
     </header>
+    <main class="content-area container-fluid">
+        <h3 class="titleContactenos">Contactenos</h3>
+        <section class="container">
+            <h4 class="container">Tus datos:</h4>
+            <form class="container-fluid" onsubmit="return validacionFormulario()">
+                <div class="row fila">
+                    <label for="Nombre" class="col-6">Nombre: *</label>
+                    <input type="text" name="Nombre" id="nombreID" class="col-6 textinp">
+                </div>
+                <div class="row fila">
+                    <label for="Apellido" class="col-6">Apellido: *</label>
+                    <input type="text" name="Apellido" id="apellidoID" class="col-6 textinp">
+                </div>
+                <div class="row fila">
+                    <label for="Direccion" class="col-6">Direccion:</label>
+                    <input type="text" name="Direccion" id="direccionID" class="col-6 textinp">
+                </div>
+                <div class="row fila">
+                    <label for="Ciudad" class="col-6">Ciudad:</label>
+                    <input type="text" name="Ciudad" id="ciudadID" class="col-6 textinp">
+                </div>
+                <div class="row fila">
+                    <label for="codigopostal" class="col-6">Codigo Postal:</label>
+                    <input type="text" name="codigopostal" id="codigopostalID" class="col-6 textinp">
+                </div>
+                <div class="row fila">
+                    <label for="email" class="col-6">Correo Electronico:*</label>
+                    <input type="email" name="email " id="emailID" class="col-6 textinp">
+                </div>
+                <div class="row fila">
+                    <label for="telefono" class="col-6">Telefono:*</label>
+                    <input type="text" name="telefono " id="telefonoID" class="col-6 textinp">
+                </div>
 
-    <h3>Formulario de Registro</h3>
-    <form action="show_data.html" target="_blank">
-        <label for="Nombre">Nombre:</label>
-        <input type="text" name="Nombre" id="nombreID"> <br><br>
-        <label for="Apellido">Apellido:</label>
-        <input type="text" name="Apellido" id="apellidoID"> <br><br>
-        <label for="Direccion">Direccion:</label>
-        <input type="text" name="Direccion" id="direccionID"> <br><br>
-        <label for="Ciudad">Ciudad:</label>
-        <input type="text" name="Ciudad" id="ciudadID"> <br><br>
-        <label for="codigopostal">Codigo Postal:</label>
-        <input type="text" name="codigopostal" id="codigopostalID"> <br><br>
-        <label for="Fecha">Fecha de Nacimiento (mm/dd/yyyy):</label>
-        <input type="date" name="Fecha" id="FechaID"> <br><br>
-        
+                <div class="row fila">
+                    <label for="genero" class="col-6">Genero:</label>
+                    <div class="col-6">
+                        <div>
+                            <input type="radio" name="genero" value="Hombre" id="gHombreID">
+                            <label for="Hombre">Hombre</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="genero" value="Mujer" id="gMujerID">
+                            <label for="Mujer">Mujer</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="genero" value="Otro" id="gOtroID">
+                            <label for="Otro">Otro</label>
+                        </div>
+                    </div>
 
+                </div>
+
+                <div class="row fila">
+                    <label for="contacto" class="col-6">¿De donde nos conoces?</label>
+                    <div class="col-6">
+                        <div>
+                            <input type="checkbox" name="contacto" value="Recomendacion" id="RecomendacionID">
+                            <label for="Recomendacion">Recomendacion de clientes nuestros</label>
+                        </div>
+                        <div>
+                        <input type="checkbox" name="contacto" value="Redes sociales" id="RedesSocialesID">
+                        <label for="Redes sociales">Redes sociales</label>
+                    </div>
+                        <div>
+                        <input type="checkbox" name="contacto" value="Agencias de turismos" id="AgenciasTurismosID">
+                        <label for="Agencias de turismos">Agencias de turismos</label>
+                    </div>
+
+                    </div>
+                </div>
+
+                <input type="submit" value="ENVIAR">
+            </form>
+        </section>
+        <section class="container">
+            <h4 class="container">Envianos un correo:</h4>
+            <ul>
+                <li>Dirrección de Correo: <a href="mailto:mail@dadazas.com">mail@dadazas.com</a></li>
+                <li>Telefono: +54(911)-3819-6067</li>
+                
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer-area">
         <div>
-            <label for="genero">Genero:</label>
-            <input type="radio" name="genero" value="Hombre" id="gHombreID">     
-            <label for="Hombre">Hombre</label>
-            <input type="radio" name="genero" value="Mujer" id="gMujerID">     
-            <label for="Mujer">Mujer</label>
-            <input type="radio" name="genero" value="Otro" id="gOtroID">     
-            <label for="Otro">Otro</label>
-            <br><br>
-        </div>
-
-        <div>
-            <label for="estudios">Estudios:</label>
-            <input type="checkbox" name="Estudios" value="Primario" id="primarioID"> 
-            <label for="Primario">Primario</label>
-            <input type="checkbox" name="Estudios" value="Secundario" id="SecundarioID"> 
-            <label for="Secundario">Secundario</label>
-            <input type="checkbox" name="Estudios" value="Terceario" id="TercearioID"> 
-            <label for="Terceario">Terceario</label>
-            <input type="checkbox" name="Estudios" value="Universitario" id="UniversitarioID"> 
-            <label for="Universitario">Universitario</label>
-            <input type="checkbox" name="Estudios" value="Otro" id="OtroID"> 
-            <label for="Otro">Otro</label>
-            <br><br>
-        </div>
-
-        <input type="submit" value="ENVIAR"><br><br>
-    </form>
-
-
-    <footer>
-        <div >
             <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
             <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
             <a href="https://pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin" ></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-        <p >Derechos reservados @2024</p>
-   </footer>
+        <p>Derechos reservados @2024</p>
+    </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/31818fb38f.js" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
