@@ -27,8 +27,8 @@ function validarEmail(email) {
 //Clip en menu movile
 const elemento = document.querySelector('.nav-movile-popup');
 
-const botonActivar = document.getElementById('icon-menu');
-const botonDesactivar = document.getElementById('faxx2');
+const botonActivar = document.getElementsByClassName('icon-menu');
+const botonDesactivar = document.getElementsByClassName('fa-x');
 
 botonActivar.addEventListener('click', function() {
     elemento.classList.add('activado');
