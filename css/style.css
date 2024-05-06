@@ -11,22 +11,16 @@ body{
     margin: 0%;
 }
 header {
-    background: url(/imgs/header-bg.jpg);  
+    background: var(--bs-border-color); 
 }
 
-header nav a,.buttom {
+.item-nav,.buttom {
     color: white;
     text-align: center;
-    background-color: grey;
-    border-radius: 10px;
-    padding: 5px;
-    margin-left: 5px;
-    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+}
 
-}
-header nav a:hover{
-    background-color: rgba(255, 255, 255, 0.747);
-}
 footer {
     padding: 10px;
     background-color: var(--bs-footer-color);
@@ -78,6 +72,12 @@ footer div {
     border-radius: var(--bs-border-radius);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+.icon-menu{
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 2px;
+
+}
 /*-------------ESTRUCTURA GRID---------------*/
 
 .grid-container {
@@ -92,38 +92,40 @@ footer div {
 .navbar-area {
     grid-area: navbar-area;
 
+    width: 100%;
+
 }
 .nav {
     display: block;
+
+}
+.navbar{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    
 }
 .icon-menu{
     display: none;
 }
 .logo{
     width: 100px;
-    height: 50px;
+    height:100px;
 }
 .content-area{
     margin: 0 auto;
     max-width: 800px;
 }
-/*----------- PUNTOS DE CORTE -----------*/
-/* Extra small devices (Dispositivos moviles) */
-@media only screen and (max-width: 600px) {
-    .nav{
-        display: none;
-    }
-    .icon-menu{
-        display:block;
-    }
-}
-    /* Small devices (600px and up) */
-@media only screen and (min-width: 600px) {
+.nav-movile{
+    display: none;
 
 }
-    /* Medium devices (768px and up) */
-@media only screen and (min-width: 768px) {
-
+.icon-menu:hover{
+    color: #CCCCCC;
 }
 
 
@@ -186,17 +188,67 @@ footer div {
     vertical-align: middle;
 
 }
+.nav-movile-popup{
+    transform: translateX(-100%); /* Empieza fuera de la pantalla hacia la izquierda */
+    transition: transform 0.5s ease; /* Transición suave de 0.5 segundos */
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.nav-movile-popup.activado{
+transform: translateX(0); /* Se desplaza hacia la derecha cuando se activa la clase */
+}
+
+.nav-movile-izq{
+    background-color: #ffffff;
+    height: 100%;
+    width: 70%;
+    opacity: 1.0;
+    display: flex;
+    flex-direction: column  ;
+}
+.nav-movile-der{
+    background-color: #9a9a9ba5;
+    height: 100%;
+    width: 30%;
+    opacity: 0.5;
+}
+.item-nav-movile{
+    color: #000000;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d0d1d0;
+}
+#faxx2{
+    position:absolute;
+    top: 10px;
+    right: 10px;
+}
 
 
-/* Breakpoints */
 
-/* Extra small devices (600px and down) */
+
+/*----------- PUNTOS DE CORTE -----------*/
+/* Extra small devices (Dispositivos moviles) */
+
 @media only screen and (max-width: 600px) {
     .container-index {
         background: red;
         flex-direction: column;
     }
-
+    .nav-pc{
+        display: none;
+    }
+    .nav-movile{
+        display:block;
+    }
 }
 
 /* Small devices (600px and up) */

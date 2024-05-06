@@ -12,21 +12,38 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="./css/style.css" rel="stylesheet">
 
-   
+
 </head>
 
 <body class="grid-container">
     <header class="navbar-area">
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="acerca.htm">Acerca</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="sucursales.html">Sucursales</a>
-        </nav>
-        <img class="logo" src=".\imgs\pizza napolitana.jpg">
-        <i class="icon-menu"></i>
+        <div class="navbar">
+            <a href="index.html" class="item-nav"><img class="logo" src="./imgs/empresa.png"></a>
+            <nav class="nav-pc">
+                <a href="index.html" class="item-nav">Inicio</a>
+                <a href="acerca.htm" class="item-nav">Acerca</a>
+                <a href="contacto.html" class="item-nav">Contacto</a>
+                <a href="sucursales.html" class="item-nav">Sucursales</a>
+            </nav>
+            <nav class="nav-movile">
+                <i class="fa-solid fa-bars icon-menu" id="icon-menu"></i>
+            </nav>
+
+        </div>
 
     </header>
+    <div class="nav-movile-popup">
+        <div class="nav-movile-izq">
+
+                <a href="index.html" class="item-nav-movile">Inicio</a>
+                <a href="acerca.htm" class="item-nav-movile">Acerca</a>
+                <a href="contacto.html" class="item-nav-movile">Contacto</a>
+                <a href="sucursales.html" class="item-nav-movile">Sucursales</a>
+        </div>
+        <div class="nav-movile-der">
+            <i class="fa-solid fa-x" id="faxx2"></i>
+        </div>
+    </div>
     <main class="content-area container-fluid">
         <h3 class="titleContactenos">Contactenos</h3>
         <section class="container">
@@ -88,13 +105,13 @@
                             <label for="Recomendacion">Recomendacion de clientes nuestros</label>
                         </div>
                         <div>
-                        <input type="checkbox" name="contacto" value="Redes sociales" id="RedesSocialesID">
-                        <label for="Redes sociales">Redes sociales</label>
-                    </div>
+                            <input type="checkbox" name="contacto" value="Redes sociales" id="RedesSocialesID">
+                            <label for="Redes sociales">Redes sociales</label>
+                        </div>
                         <div>
-                        <input type="checkbox" name="contacto" value="Agencias de turismos" id="AgenciasTurismosID">
-                        <label for="Agencias de turismos">Agencias de turismos</label>
-                    </div>
+                            <input type="checkbox" name="contacto" value="Agencias de turismos" id="AgenciasTurismosID">
+                            <label for="Agencias de turismos">Agencias de turismos</label>
+                        </div>
 
                     </div>
                 </div>
@@ -107,7 +124,7 @@
             <ul>
                 <li>Dirrección de Correo: <a href="mailto:mail@dadazas.com">mail@dadazas.com</a></li>
                 <li>Telefono: +54(911)-3819-6067</li>
-                
+
             </ul>
         </section>
     </main>
