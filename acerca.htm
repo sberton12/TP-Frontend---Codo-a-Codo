@@ -9,17 +9,33 @@
     <script src="https://kit.fontawesome.com/31818fb38f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="acerca.htm">Acerca</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="registrarse.htm">Registrarse</a>
-                <a href="sucursales.html">Sucursales</a> 
+    <header class="navbar-area">
+        <div class="navbar">
+            <a href="index.html" class="item-nav"><img class="logo" src="./imgs/empresa.png"></a>
+            <nav class="nav-pc">
+                <a href="index.html" class="item-nav">Inicio</a>
+                <a href="acerca.htm" class="item-nav">Acerca</a>
+                <a href="contacto.html" class="item-nav">Contacto</a>
+                <a href="sucursales.html" class="item-nav">Sucursales</a>
             </nav>
-        </nav>
+            <nav class="nav-movile">
+                <i class="fa-solid fa-bars icon-menu" id="icon-menu"></i>
+            </nav>
+
+        </div>
+
     </header>
+    <div class="nav-movile-popup">
+        <div class="nav-movile-izq">
+            <a href="index.html" class="item-nav-movile">Inicio</a>
+            <a href="acerca.htm" class="item-nav-movile">Acerca</a>
+            <a href="contacto.html" class="item-nav-movile">Contacto</a>
+            <a href="sucursales.html" class="item-nav-movile">Sucursales</a>
+        </div>
+        <div class="nav-movile-der">
+            <i class="fa-solid fa-x" id="faxx2"></i>
+        </div>
+    </div>
   <footer >
         <div>
         <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
