@@ -1,5 +1,4 @@
 //Validacion de campos obligatorios
-
 function validacionFormulario (){
     var nombre = document.getElementById("nombreID").value;
     var apellido = document.getElementById("apellidoID").value;
@@ -17,10 +16,19 @@ function validacionFormulario (){
     alert ("formulario enviado")
     return true
 }
+    
+//No contiene numeros ni caracteres especiales
+function validarNombreYApellido(text){
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return regex.test(text);
+}
+
+function validarTelefono(){
+
+}
 
 function validarEmail(email) {
-    // Expresión regular para validar un correo electrónico
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return regex.test(email);
 }
 

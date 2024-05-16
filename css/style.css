@@ -41,8 +41,12 @@ footer div {
     justify-content: center;
 
 }
+a:hover {
+    color: #0a58ca;
+}
+/*-------------------------------------------*/
 /* ----------------PAGINA CONTACTOS ----------------*/
-
+/*-------------------------------------------*/
 .fila{
     margin-top: 5px;
 }
@@ -78,7 +82,9 @@ footer div {
     border-radius: 2px;
 
 }
+/*-------------------------------------------*/
 /*-------------ESTRUCTURA GRID---------------*/
+/*-------------------------------------------*/
 
 .grid-container {
     width: 100%;
@@ -88,17 +94,13 @@ footer div {
         'content-area'
         'footer-area';
 }
-
+/*---------Barra de navegacion---------*/
 .navbar-area {
     grid-area: navbar-area;
-
     width: 100%;
 
 }
-.nav {
-    display: block;
-
-}
+/*---------Barra de navegacion para PC---------*/
 .navbar{
     display: flex;
     margin: 0 auto;
@@ -109,28 +111,74 @@ footer div {
     padding-right: 5%;
     
 }
-.icon-menu{
-    display: none;
-}
+
 .logo{
-    width: 100px;
-    height:100px;
+    width: 80px;
+    height:80px;
 }
 .content-area{
     margin: 0 auto;
     max-width: 800px;
 }
+
+/*---------Barra de navegacion movile---------*/
 .nav-movile{
     display: none;
 
+}
+.icon-menu{
+    display: none;
 }
 .icon-menu:hover{
     color: #CCCCCC;
 }
 
+.nav-movile-popup{
+    transform: translateX(-100%); /* Empieza fuera de la pantalla hacia la izquierda */
+    transition: transform 0.5s ease; /* Transición suave de 0.5 segundos */
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.nav-movile-popup.activado{
+transform: translateX(0); 
+}
+
+.nav-movile-izq{
+    background-color: #ffffff;
+    height: 100%;
+    width: 70%;
+    opacity: 1.0;
+    display: flex;
+    flex-direction: column  ;
+}
+.nav-movile-der{
+    background-color: #9a9a9ba5;
+    height: 100%;
+    width: 30%;
+    opacity: 0.5;
+}
+.item-nav-movile{
+    color: #000000;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d0d1d0;
+}
+#faxx2{
+    position:absolute;
+    top: 10px;
+    right: 10px;
+}
 
 
-/* Estilos de container servicios */
+/* ----------------PAGINA INDEX ----------------*/
 
 .container-index {
     background: #FFb0d5;
@@ -144,10 +192,19 @@ footer div {
 .item {
     margin-bottom: 1.33em;
     margin-top: 1.33em;
+    border: 2pt solid #d06712;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px 10px 10px 10px;
+}
+.item2 {
+    margin-bottom: 1.33em;
+    margin-top: 1.33em;
     border: 2pt solid #CCCCCC;
     padding: 1em;
     margin: 1em;
     border-radius: 10px 10px 10px 10px;
+    background-color: #FFFFFF;
 }
 
 
@@ -188,49 +245,6 @@ footer div {
     vertical-align: middle;
 
 }
-.nav-movile-popup{
-    transform: translateX(-100%); /* Empieza fuera de la pantalla hacia la izquierda */
-    transition: transform 0.5s ease; /* Transición suave de 0.5 segundos */
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: 10px;
-    display: flex;
-    flex-direction: row;
-}
-.nav-movile-popup.activado{
-transform: translateX(0); /* Se desplaza hacia la derecha cuando se activa la clase */
-}
-
-.nav-movile-izq{
-    background-color: #ffffff;
-    height: 100%;
-    width: 70%;
-    opacity: 1.0;
-    display: flex;
-    flex-direction: column  ;
-}
-.nav-movile-der{
-    background-color: #9a9a9ba5;
-    height: 100%;
-    width: 30%;
-    opacity: 0.5;
-}
-.item-nav-movile{
-    color: #000000;
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding-top: 20px;
-    font-size: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #d0d1d0;
-}
-#faxx2{
-    position:absolute;
-    top: 10px;
-    right: 10px;
-}
 
 
 
@@ -240,7 +254,7 @@ transform: translateX(0); /* Se desplaza hacia la derecha cuando se activa la cl
 
 @media only screen and (max-width: 600px) {
     .container-index {
-        background: red;
+
         flex-direction: column;
     }
     .nav-pc{
@@ -249,23 +263,29 @@ transform: translateX(0); /* Se desplaza hacia la derecha cuando se activa la cl
     .nav-movile{
         display:block;
     }
+    .container-index2 {
+ 
+        flex-direction: column;
+    }
 }
 
 /* Small devices (600px and up) */
 @media only screen and (min-width: 600px) {
     .container-index {
         flex-direction: column;
-        background: green;
+
     }
 }
 
 /* Medium devices (768px and up) */
 @media only screen and (min-width: 768px) {
-    .container-index {
+    .container-index, .container-index2 {
         flex-direction: row;
-        background: orange;
+ 
     }
-
+    .item2 {
+        width: 20%;
+    }
     .item {
         width: 40%;
     }
@@ -273,23 +293,27 @@ transform: translateX(0); /* Se desplaza hacia la derecha cuando se activa la cl
 
 /* Large devices (992px and up) */
 @media only screen and (min-width: 992px) {
-    .container-index {
-        background: pink;
+    .container-index, .container-index2 {
+    
         flex-direction: row;
     }
-
-    .item {
+    .item2 {
+        width: 20%;
+    }
+    .item, item2 {
         width: 40%;
     }
 }
 
 /* Extralarge devices (1200pz and up) */
 @media only screen and (min-width: 1200px) {
-    .container-index {
-        background: blue;
+    .container-index, .container-index2 {
+      
         flex-direction: row;
     }
-
+    .item2 {
+        width: 20%;
+    }
     .item {
         width: 40%;
     }
@@ -382,6 +406,25 @@ a {
     text-indent: 0;
 }
 
+.b1 {
+    margin-top: 3vw;
+}
+
+.marco {
+    width: 96%;
+padding: 2vW;
+}
+
+.item-nav{
+    text-indent: 0;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    color: #ff8243;
+}
 p {
     text-indent: 0;
     margin: 0;
@@ -406,18 +449,8 @@ h4,
 h5,
 h6 {
     font-family: "Montserrat", sans-serif;
-    text-align: left;
+    text-align: center;
     font-size: 1.5vw;
     margin-left: 0;
     text-indent: 0;
-}
-
-/* ELIMIMAR ESTE ESTILO, es solo para destacar la sección */
-.formulario {
-    width: 100%;
-    height: 5em;
-    padding-top: 3.5em;
-    vertical-align: middle;
-    background-color: red;
-
 }
