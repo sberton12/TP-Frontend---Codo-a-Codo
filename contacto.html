@@ -21,9 +21,10 @@
             <a href="index.html" class="item-nav"><img class="logo" src="./imgs/empresa.png"></a>
             <nav class="nav-pc">
                 <a href="index.html" class="item-nav">Inicio</a>
-                <a href="acerca.htm" class="item-nav">Acerca</a>
-                <a href="contacto.html" class="item-nav">Contacto</a>
-                <a href="sucursales.html" class="item-nav">Sucursales</a>
+                <a href="index.html#SeccionViajes" class="item-nav">Nuestros Viajes</a> 
+                <a href="index.html#SeccionOpiniones" class="item-nav">Opiniones</a>
+                <a href="contacto.html" class="item-nav">Contactanos</a>
+                <a href="contacto.html#SeccionTours" class="item-nav">Info de tours</a>
             </nav>
             <nav class="nav-movile">
                 <i class="fa-solid fa-bars icon-menu" id="icon-menu"></i>
@@ -35,18 +36,19 @@
     <div class="nav-movile-popup">
         <div class="nav-movile-izq">
             <a href="index.html" class="item-nav-movile">Inicio</a>
-            <a href="acerca.htm" class="item-nav-movile">Acerca</a>
-            <a href="contacto.html" class="item-nav-movile">Contacto</a>
-            <a href="sucursales.html" class="item-nav-movile">Sucursales</a>
+            <a href="index.html#SeccionViajes" class="item-nav-movile">Nuestros Viajes</a> 
+            <a href="index.html#SeccionOpiniones" class="item-nav-movile">Opiniones</a>
+            <a href="contacto.html" class="item-nav-movile">Contactanos</a>
+            <a href="contacto.html#SeccionTours" class="item-nav-movile">Info de tours</a>
         </div>
         <div class="nav-movile-der">
             <i class="fa-solid fa-x" id="faxx2"></i>
         </div>
     </div>
     <main class="content-area container-fluid">
-        <h3 class="titleContactenos">Contactenos</h3>
+        <h3 class="titleContactenos">Conocenos más</h3>
         <section class="container">
-            <h4 class="subTitleContactenos">Tus datos:</h4>
+            <h4 class="subTitleContactenos">Contactanos:</h4>
             <form class="container-fluid" id="Form" onsubmit="return validacionFormulario()">
                 <div class="row fila">
                     <label for="Nombre" class="col-6">Nombre: *</label>
@@ -101,7 +103,7 @@
                     <div class="col-6">
                         <div>
                             <input type="checkbox" name="contacto" value="Recomendacion" id="RecomendacionID">
-                            <label for="Recomendacion">Recomendacion de clientes nuestros</label>
+                            <label for="Recomendacion">Recomendacion de nuestros clientes </label>
                         </div>
                         <div>
                             <input type="checkbox" name="contacto" value="Redes sociales" id="RedesSocialesID">
@@ -124,6 +126,52 @@
                 <li>Dirrección de Correo: <a href="mailto:mail@dadazas.com">mail@dadazas.com</a></li>
                 <li>Telefono: +54(911)-3819-6067</li>
 
+            </ul>
+        </section>
+        <section class="container" id="SeccionTours">
+            <h4 class="subTitleContactenos">Informacion de los tours:</h4>
+            <div>
+                <p class="b1">Que incluye el tour:</p>
+                <div>Guia/Fotógrafo, Transporte, Alojamiento en Refugio AFAPUNA (consultar por hotel boutique) de altura,
+                    chofer/guía en castellano o ingles (segun se solicite) en toda la excursión.</div>
+            </div>
+            <p class="b1">Que no incluye:</p>
+            <div>
+                Equipo de fotografía, Desayuno, Almuerzo, entradas a museos o similares, degustaciones pagas, propinas y
+                extras no especificados.</div>
+
+            <p class="b1">Que recomendamos llevar:</p>
+            <div>Ropa Comoda, documentos, dinero, Anteojos de sol, protector solar, gorra o sombrero, ropa de abrigo,
+                binoculares, cámara de fotos.</div>
+            <p class="b1">Politica de la empresa y cancelaciones</p>
+            <ul>
+                <li>
+                    <p class="b1">Transporte:</p> El tipo de vehículo asignado quedara pura y exclusivamente a criterio
+                    de La
+                    Empresa.</p>
+                </li>
+                <li>
+                    <p>Equipaje:</p> El equipaje y demás objetos corren por cuenta y riesgo de los pasajeros.
+                </li>
+                <li>Documentación:</p> La presentación de documentación para la realización del viaje contratado, queda
+                    a
+                    cargo de los pasajeros.</li>
+                <li>
+                    <p>Derecho de permanencia:</p> La Empresa se reserva el derecho de permanencia de pasajeros que por
+                    mala
+                    conducta, higiene, salud u otro motivo constituyan incomodidad para los demás integrantes del viaje.
+                </li>
+                <li>
+                    <p>Cancelaciones:</p> Para las cancelaciones realizadas faltando 3 días para el inicio del viaje, se
+                    descontara el 30% de total, para cancelaciones realizadas faltando 2 días, se descontara el 50% del
+                    total y
+                    para cancelaciones dentro de las 24 horas, La Empresa no efectuara devolución alguna.
+                </li>
+                <li>
+                    <p>Pagos:</p> La reserva quedara confirmada una vez hecho el pago del 50% del servicio contratado,
+                    debiendo
+                    el pasajero completar el saldo restante (50%) en el momento de iniciar el viaje.
+                </li>
             </ul>
         </section>
     </main>
