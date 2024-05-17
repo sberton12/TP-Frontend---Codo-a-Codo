@@ -181,12 +181,12 @@ transform: translateX(0);
 /* ----------------PAGINA INDEX ----------------*/
 
 .container-index {
-    background: #FFb0d5;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
+
 }
 
 .item {
@@ -196,6 +196,7 @@ transform: translateX(0);
     padding: 1em;
     margin: 1em;
     border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.523);
 }
 .item2 {
     margin-bottom: 1.33em;
@@ -246,7 +247,13 @@ transform: translateX(0);
 
 }
 
-
+.ConoceMas{
+    text-align: right;
+    display: block;
+    margin-top: 5px;
+    color:#474747;
+    font-size: 1.5vw;
+}
 
 
 /*----------- PUNTOS DE CORTE -----------*/

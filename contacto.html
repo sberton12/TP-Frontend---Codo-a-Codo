@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La cocina de Sergio</title>
+    <title>Las maravillas del Norte</title>
 
     <link rel="icon" href=".\imgs\logo.jpg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@
                 <a href="index.html" class="item-nav">Inicio</a>
                 <a href="index.html#SeccionViajes" class="item-nav">Nuestros Viajes</a> 
                 <a href="index.html#SeccionOpiniones" class="item-nav">Opiniones</a>
-                <a href="contacto.html" class="item-nav">Contactanos</a>
+                <a href="contacto.html#SeccionContactanos" class="item-nav">Contactanos</a>
                 <a href="contacto.html#SeccionTours" class="item-nav">Info de tours</a>
             </nav>
             <nav class="nav-movile">
@@ -38,7 +38,7 @@
             <a href="index.html" class="item-nav-movile">Inicio</a>
             <a href="index.html#SeccionViajes" class="item-nav-movile">Nuestros Viajes</a> 
             <a href="index.html#SeccionOpiniones" class="item-nav-movile">Opiniones</a>
-            <a href="contacto.html" class="item-nav-movile">Contactanos</a>
+            <a href="contacto.html#SeccionContactanos" class="item-nav-movile">Conocenos </a>
             <a href="contacto.html#SeccionTours" class="item-nav-movile">Info de tours</a>
         </div>
         <div class="nav-movile-der">
@@ -47,7 +47,53 @@
     </div>
     <main class="content-area container-fluid">
         <h3 class="titleContactenos">Conocenos más</h3>
-        <section class="container">
+        <section class="container" id="SeccionTours">
+            <h4 class="subTitleContactenos">Informacion de los tours:</h4>
+            <div>
+                <p class="b1">Que incluye el tour:</p>
+                <div>Guia/Fotógrafo, Transporte, Alojamiento en Refugio AFAPUNA (consultar por hotel boutique) de altura,
+                    chofer/guía en castellano o ingles (segun se solicite) en toda la excursión.</div>
+            </div>
+            <p class="b1">Que no incluye:</p>
+            <div>
+                Equipo de fotografía, Desayuno, Almuerzo, entradas a museos o similares, degustaciones pagas, propinas y
+                extras no especificados.</div>
+
+            <p class="b1">Que recomendamos llevar:</p>
+            <div>Ropa Comoda, documentos, dinero, Anteojos de sol, protector solar, gorra o sombrero, ropa de abrigo,
+                binoculares, cámara de fotos.</div>
+            <p class="b1">Politica de la empresa y cancelaciones</p>
+            <ul>
+                <li>
+                    <p class="b1">Transporte:</p> El tipo de vehículo asignado quedara pura y exclusivamente a criterio
+                    de La
+                    Empresa.</p>
+                </li>
+                <li>
+                    <p>Equipaje:</p> El equipaje y demás objetos corren por cuenta y riesgo de los pasajeros.
+                </li>
+                <li>Documentación:</p> La presentación de documentación para la realización del viaje contratado, queda
+                    a
+                    cargo de los pasajeros.</li>
+                <li>
+                    <p>Derecho de permanencia:</p> La Empresa se reserva el derecho de permanencia de pasajeros que por
+                    mala
+                    conducta, higiene, salud u otro motivo constituyan incomodidad para los demás integrantes del viaje.
+                </li>
+                <li>
+                    <p>Cancelaciones:</p> Para las cancelaciones realizadas faltando 3 días para el inicio del viaje, se
+                    descontara el 30% de total, para cancelaciones realizadas faltando 2 días, se descontara el 50% del
+                    total y
+                    para cancelaciones dentro de las 24 horas, La Empresa no efectuara devolución alguna.
+                </li>
+                <li>
+                    <p>Pagos:</p> La reserva quedara confirmada una vez hecho el pago del 50% del servicio contratado,
+                    debiendo
+                    el pasajero completar el saldo restante (50%) en el momento de iniciar el viaje.
+                </li>
+            </ul>
+        </section>
+        <section class="container" id="SeccionContactanos">
             <h4 class="subTitleContactenos">Contactanos:</h4>
             <form class="container-fluid" id="Form" onsubmit="return validacionFormulario()">
                 <div class="row fila">
@@ -128,52 +174,7 @@
 
             </ul>
         </section>
-        <section class="container" id="SeccionTours">
-            <h4 class="subTitleContactenos">Informacion de los tours:</h4>
-            <div>
-                <p class="b1">Que incluye el tour:</p>
-                <div>Guia/Fotógrafo, Transporte, Alojamiento en Refugio AFAPUNA (consultar por hotel boutique) de altura,
-                    chofer/guía en castellano o ingles (segun se solicite) en toda la excursión.</div>
-            </div>
-            <p class="b1">Que no incluye:</p>
-            <div>
-                Equipo de fotografía, Desayuno, Almuerzo, entradas a museos o similares, degustaciones pagas, propinas y
-                extras no especificados.</div>
 
-            <p class="b1">Que recomendamos llevar:</p>
-            <div>Ropa Comoda, documentos, dinero, Anteojos de sol, protector solar, gorra o sombrero, ropa de abrigo,
-                binoculares, cámara de fotos.</div>
-            <p class="b1">Politica de la empresa y cancelaciones</p>
-            <ul>
-                <li>
-                    <p class="b1">Transporte:</p> El tipo de vehículo asignado quedara pura y exclusivamente a criterio
-                    de La
-                    Empresa.</p>
-                </li>
-                <li>
-                    <p>Equipaje:</p> El equipaje y demás objetos corren por cuenta y riesgo de los pasajeros.
-                </li>
-                <li>Documentación:</p> La presentación de documentación para la realización del viaje contratado, queda
-                    a
-                    cargo de los pasajeros.</li>
-                <li>
-                    <p>Derecho de permanencia:</p> La Empresa se reserva el derecho de permanencia de pasajeros que por
-                    mala
-                    conducta, higiene, salud u otro motivo constituyan incomodidad para los demás integrantes del viaje.
-                </li>
-                <li>
-                    <p>Cancelaciones:</p> Para las cancelaciones realizadas faltando 3 días para el inicio del viaje, se
-                    descontara el 30% de total, para cancelaciones realizadas faltando 2 días, se descontara el 50% del
-                    total y
-                    para cancelaciones dentro de las 24 horas, La Empresa no efectuara devolución alguna.
-                </li>
-                <li>
-                    <p>Pagos:</p> La reserva quedara confirmada una vez hecho el pago del 50% del servicio contratado,
-                    debiendo
-                    el pasajero completar el saldo restante (50%) en el momento de iniciar el viaje.
-                </li>
-            </ul>
-        </section>
     </main>
 
     <footer class="footer-area">
