@@ -434,7 +434,42 @@ p {
     hyphens: auto;
     font-family: "Montserrat", sans-serif;
 }
+.nombre {
+    font-weight: bold;
+    color: #ff8243;
+    
+}
+.viaje{
+    text-align: right;
+    font-weight: bold;
+    color: #909090;
+    font-size: 1vw;
+    margin-bottom: 1em;
+}
+.resena {
+    text-indent: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 1.5vw;
+    hyphens: auto;
+    font-family: "Montserrat", sans-serif;
+}
 
+.mira {
+    text-indent: 0;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 1vw;
+    margin-top: 1em;
+    hyphens: auto;
+    font-family: "Montserrat", sans-serif;
+}
+
+.naranja{
+color: #ff8243;
+}
 h2 {
     font-family: "Montserrat", sans-serif;
     text-align: center;
