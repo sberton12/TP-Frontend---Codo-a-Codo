@@ -82,7 +82,89 @@ a:hover {
     border-radius: 2px;
 
 }
+
+
+
+
 /*-------------------------------------------*/
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 375px; /* Ajustar según el tamaño de las imágenes */
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajustar el contenido de la imagen */
+  }
+  
+  .carousel-item.active {
+    opacity: 1;
+  }
+  
+  .carousel-caption1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 5vw;
+    font-weight: 900;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    
+  }
+  .carousel-caption2 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
 /*-------------ESTRUCTURA GRID---------------*/
 /*-------------------------------------------*/
 
@@ -495,16 +577,3 @@ h6 {
     margin-left: 0;
     text-indent: 0;
 }
-<<<<<<< HEAD
-=======
-
-/* ELIMIMAR ESTE ESTILO, es solo para destacar la sección */
-.formulario {
-    width: 100%;
-    height: 5em;
-    padding-top: 3.5em;
-    vertical-align: middle;
-    background-color: red;
-
-}
->>>>>>> c77ec79cddeece6817e8d39a9445ea659a5ef8f9
