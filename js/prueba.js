@@ -1,14 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     const carouselInner = document.querySelector('.carousel-inner');
     const items = document.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
     const totalItems = items.length;
+    let currentIndex = 0;
   
     function showSlide(index) {
-      carouselInner.scrollTo({
-        left: index * carouselInner.clientWidth,
-        behavior: 'smooth'
-      });
+      carouselInner.style.transform = `translateX(-${index * 100}%)`;
     }
   
     function nextSlide() {
@@ -22,5 +19,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     // Automáticamente cambiar de slide cada 1 segundo
-    setInterval(nextSlide, 3000);
+    setInterval(nextSlide, 7000);
   });

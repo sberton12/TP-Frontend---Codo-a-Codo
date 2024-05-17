@@ -1,63 +1,43 @@
 .carousel {
-    position: relative;
-    width: 100%;
-    height: 300px; /* Ajustar según el tamaño de las imágenes */
-    overflow: hidden;
-  }
-  
-  .carousel-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .carousel-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease;
-  }
-  
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajustar el contenido de la imagen */
-  }
-  
-  .carousel-item.active {
-    opacity: 1;
-  }
-  
-  .carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
