@@ -270,7 +270,14 @@ transform: translateX(0);
     align-items: stretch;
 
 }
+.container-index2 {
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
 .item {
     margin-bottom: 1.33em;
     margin-top: 1.33em;
@@ -342,7 +349,7 @@ transform: translateX(0);
 /* Extra small devices (Dispositivos moviles) */
 
 @media only screen and (max-width: 600px) {
-    .container-index {
+    .container-index, .container-index2 { {
 
         flex-direction: column;
     }
@@ -360,7 +367,7 @@ transform: translateX(0);
 
 /* Small devices (600px and up) */
 @media only screen and (min-width: 600px) {
-    .container-index {
+    .container-index, .container-index2 { {
         flex-direction: column;
 
     }
