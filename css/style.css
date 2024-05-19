@@ -58,6 +58,7 @@ a:hover {
     margin-top: 30px;
     margin-bottom: 5px;
     font-size: calc(1.275rem + .3vw);
+    text-align: start;
    
 }
 
@@ -90,7 +91,7 @@ a:hover {
 .carousel {
     position: relative;
     width: 100%;
-    height: 375px; /* Ajustar según el tamaño de las imágenes */
+    height: 375px; 
     overflow: hidden;
   }
   
@@ -113,7 +114,7 @@ a:hover {
   .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajustar el contenido de la imagen */
+    object-fit: cover;
   }
   
   .carousel-item.active {
@@ -125,7 +126,6 @@ a:hover {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10px;
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 5vw;
@@ -157,14 +157,7 @@ a:hover {
     padding: 10px;
     cursor: pointer;
   }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
+
 /*-------------ESTRUCTURA GRID---------------*/
 /*-------------------------------------------*/
 
@@ -216,12 +209,12 @@ a:hover {
 }
 
 .nav-movile-popup{
-    transform: translateX(-100%); /* Empieza fuera de la pantalla hacia la izquierda */
-    transition: transform 0.5s ease; /* Transición suave de 0.5 segundos */
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
     position: fixed;
-    height: 100%;
+    z-index: 1;
+    height: 150%;
     width: 100%;
-    z-index: 10px;
     display: flex;
     flex-direction: row;
 }
@@ -349,7 +342,7 @@ transform: translateX(0);
 /* Extra small devices (Dispositivos moviles) */
 
 @media only screen and (max-width: 600px) {
-    .container-index, .container-index2 { {
+    .container-index, .container-index2 {
 
         flex-direction: column;
     }
@@ -363,13 +356,19 @@ transform: translateX(0);
  
         flex-direction: column;
     }
+    .nav-movile-popup{
+        display: block; 
+    }
 }
 
 /* Small devices (600px and up) */
 @media only screen and (min-width: 600px) {
-    .container-index, .container-index2 { {
+    .container-index, .container-index2 {
         flex-direction: column;
 
+    }
+    .nav-movile-popup{
+        display: block; 
     }
 }
 
@@ -385,6 +384,9 @@ transform: translateX(0);
     .item {
         width: 40%;
     }
+    .nav-movile-popup{
+        display: block; 
+    }
 }
 
 /* Large devices (992px and up) */
@@ -399,6 +401,9 @@ transform: translateX(0);
     .item, item2 {
         width: 40%;
     }
+    .nav-movile-popup{
+        display: none; 
+    }
 }
 
 /* Extralarge devices (1200pz and up) */
@@ -412,6 +417,9 @@ transform: translateX(0);
     }
     .item {
         width: 40%;
+    }
+    .nav-movile-popup{
+        display: none; 
     }
 }
 
@@ -583,4 +591,8 @@ h6 {
     font-size: 1.5vw;
     margin-left: 0;
     text-indent: 0;
+}
+
+.textitem{
+    font-size: 1rem;
 }
