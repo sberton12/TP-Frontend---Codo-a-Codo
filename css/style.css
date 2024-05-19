@@ -574,6 +574,14 @@ p {
 .naranja{
 color: #ff8243;
 }
+h1 {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 2vw;
+    margin-left: 0;
+    text-indent: 0;
+}
+
 h2 {
     font-family: "Montserrat", sans-serif;
     text-align: center;
