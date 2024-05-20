@@ -1,43 +1,50 @@
 //Validacion de campos obligatorios
 const ERROR_COLOR = "red";
-
+const CORRECTO_COLOR = "#dee2e6";
 //Formulario de Contactos
-const FormContact = document.getElementById("Form");
-FormContact.onsubmit = validacionFormulario();
-
+/*const FormContact = document.getElementById("Form");
+FormContact.onsubmit = validacionFormulario;
+*/
 //Validacion de campos obligatorios
-function validacionFormulario() {
+function validacionFormulario(event) {
+  event.preventDefault(); 
   var error = 0;
 
   var elementNombre = document.getElementById("nombreID");
   if (!validarNombreYApellido(elementNombre.value)) {
-    changeBorderColor(ERROR_COLOR, elementNombre)
-    error = 1
+    changeBorderColor(ERROR_COLOR, elementNombre);
+    error = 1;
+  } else {
+    changeBorderColor(CORRECTO_COLOR, elementNombre)
   }
   var elementApellido = document.getElementById("apellidoID");
   if (!validarNombreYApellido(elementApellido.value)) {
-    changeBorderColor(ERROR_COLOR, elementApellido)
-    error = 1
+    changeBorderColor(ERROR_COLOR, elementApellido);
+    error = 1;
+  } else {
+    changeBorderColor(CORRECTO_COLOR, elementApellido);
   }
   var elementEmail = document.getElementById("telefonoID");
   if (!validarTelefono(elementEmail.value)) {
-    changeBorderColor(ERROR_COLOR, elementEmail)
-    error = 1
+    changeBorderColor(ERROR_COLOR, elementEmail);
+    error = 1;
+  }else {
+    changeBorderColor(CORRECTO_COLOR, elementEmail);
   }
   var elementCel = document.getElementById("emailID");
   if (!validarEmail(elementCel.value)) {
-    changeBorderColor(ERROR_COLOR, elementCel)
-    error = 1
+    changeBorderColor(ERROR_COLOR, elementCel);
+    error = 1;
+  }else {
+    changeBorderColor(CORRECTO_COLOR, elementCel);
   }
-  var email = document.getElementById("emailID").value;
-  var telefonoID = document.getElementById("telefonoID").value;
 
   if (error) {
-    alert("Completa todos los campos obligatorios")
-    return false
+    alert("Error con los campos obligatorios");
+    return false;
   } else {
-    alert("formulario enviado")
-    return true
+    alert("Formulario enviado");
+    return true;
   }
 }
 
@@ -73,36 +80,3 @@ botonDesactivarMenu.addEventListener('click', function () {
   elemento.classList.remove('activado');
 });
 
-
-botonDesactivar.addEventListener('click', function () {
-  elemento.classList.remove('activado');
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const carouselInner = document.querySelector('.carousel-inner');
-  const items = document.querySelectorAll('.carousel-item');
-  const totalItems = items.length;
-  let currentIndex = 0;
-
-  function showSlide(index) {
-    items.forEach((item, i) => {
-      item.classList.toggle('active', i === index);
-    });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalItems;
-    showSlide(currentIndex);
-  }
-
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-    showSlide(currentIndex);
-  }
-
-  // Inicializar el primer slide
-  showSlide(currentIndex);
-
-  // Automáticamente cambiar de slide cada 1 segundo
-  setInterval(nextSlide, 5000);
-});

@@ -96,7 +96,7 @@
         </section>
         <section class="container" id="SeccionContactanos">
             <h4 class="subTitleContactenos">Contactanos:</h4>
-            <form class="container-fluid" id="Form">
+            <form class="container-fluid" id="Form" onsubmit="return validacionFormulario(event)">
                 <div class="row fila">
                     <label for="nombreID" class="col-6">Nombre: *</label>
                     <input type="text" name="Nombre" id="nombreID" class="col-6 textinp">
@@ -148,7 +148,7 @@
                         </div>
 
                          <div>
-                            <input type="radio" name="Baritú" value="Otro" id="BaritúID">
+                            <input type="radio" name="genero" value="Otro" id="BaritúID">
                             <label for="BaritúID">Parque Nacional Baritú</label>
                         </div>
 
