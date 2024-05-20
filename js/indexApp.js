@@ -8,8 +8,6 @@ const botonDesactivarMenu = document.getElementById('faxx2');
 botonActivarMenu.addEventListener('click', function() {
   elemento.classList.add('activado');
 });
-
-
 botonDesactivarMenu.addEventListener('click', function() {
   elemento.classList.remove('activado');
 });

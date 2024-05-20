@@ -64,14 +64,16 @@ function changeBorderColor(rgb, element) {
   element.style.borderColor = rgb;
 }
 
-//Clip en menu movile
+//MENU PARA LOS MOVILES
 const elemento = document.querySelector('.nav-movile-popup');
+const botonActivarMenu = document.getElementById('icon-menu');
+const botonDesactivarMenu = document.getElementById('faxx2');
 
-const botonActivar = document.getElementById('icon-menu');
-const botonDesactivar = document.getElementById('faxx2');
-
-botonActivar.addEventListener('click', function() {
+botonActivarMenu.addEventListener('click', function() {
   elemento.classList.add('activado');
+});
+botonDesactivarMenu.addEventListener('click', function() {
+  elemento.classList.remove('activado');
 });
 
 
