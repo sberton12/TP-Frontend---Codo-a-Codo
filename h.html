@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+            <!-- Login Form -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center bg-light">
+                <div class="w-75">
+                    <h2 class="text-center">Iniciar Sesión</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Correo electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Ingrese su correo electrónico">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Ingrese su contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Registration Form -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center bg-secondary text-white">
+                <div class="w-75">
+                    <h2 class="text-center">Registrarse</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="registerFirstName">Nombre</label>
+                            <input type="text" class="form-control" id="registerFirstName" placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerLastName">Apellido</label>
+                            <input type="text" class="form-control" id="registerLastName" placeholder="Ingrese su apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerUsername">Usuario</label>
+                            <input type="text" class="form-control" id="registerUsername" placeholder="Ingrese su nombre de usuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerEmail">Correo electrónico</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Ingrese su correo electrónico">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">Contraseña</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="Ingrese su contraseña">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerConfirmPassword">Repetir Contraseña</label>
+                            <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Repita su contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-light btn-block">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

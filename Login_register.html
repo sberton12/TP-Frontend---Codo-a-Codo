@@ -51,35 +51,59 @@
         <h3 class="titleContactenos"></h3>
         <section id="Login_register" class="row">
 
-            <div class="col-6">
-                <h3 class="tituloSectionViajes">Iniciar sesión</h3>
-                <form class="container-fluid" id="Form" onsubmit="return validacionFormulario(event)">
-                    <div class="row fila">
-                        <label for="nombreID" class="col-6">Nombre de usuario: </label>
-                        <input type="text" name="username" id="username" class="col-6 textinp">
+            <div class="container-fluid vh-100">
+                <div class="row h-100">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <div class="w-75">
+                            <h2 class="text-center">Iniciar Sesión</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="loginEmail">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="loginEmail" placeholder="Ingrese su correo electrónico">
+                                </div>
+                                <div class="form-group">
+                                    <label for="loginPassword">Contraseña</label>
+                                    <input type="password" class="form-control" id="loginPassword" placeholder="Ingrese su contraseña">
+                                </div>
+                                <input type="submit" class="btn btn-primary btn-block" value="Iniciar Sesión">
+                            </form>
+                        </div>
                     </div>
-                    <div class="row fila">
-                        <label for="password" class="col-6">Contraseña: </label>
-                        <input type="text" name="password" id="password" class="col-6 textinp">
+
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <div class="w-75">
+                            <h2 class="text-center">Registrarse</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="registerFirstName">Nombre</label>
+                                    <input type="text" class="form-control" id="registerFirstName" placeholder="Ingrese su nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerLastName">Apellido</label>
+                                    <input type="text" class="form-control" id="registerLastName" placeholder="Ingrese su apellido">
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerUsername">Usuario</label>
+                                    <input type="text" class="form-control" id="registerUsername" placeholder="Ingrese su nombre de usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerEmail">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="registerEmail" placeholder="Ingrese su correo electrónico">
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerPassword">Contraseña</label>
+                                    <input type="password" class="form-control" id="registerPassword" placeholder="Ingrese su contraseña">
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerConfirmPassword">Repetir Contraseña</label>
+                                    <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Repita su contraseña">
+                                </div>
+                                <input type="submit" class="btn btn-primary btn-block   " value="Registrarse">
+
+                            </form>
+                        </div>
                     </div>
-    
-                    <input type="submit" class="col-12" value="Acceder">
-                </form>
-            </div>
-            <div class="col-6">
-                <h3 class="tituloSectionViajes">Registrarme</h3>
-                <form class="container-fluid" id="Form2" onsubmit="return validacionFormulario(event)">
-                    <div class="row fila">
-                        <label for="nombreID" class="col-6">Nombre de usuario: </label>
-                        <input type="text" name="username" id="username2" class="col-6 textinp">
-                    </div>
-                    <div class="row fila">
-                        <label for="password" class="col-6">Contraseña: </label>
-                        <input type="text" name="password" id="password2" class="col-6 textinp">
-                    </div>
-    
-                    <input type="submit" class="col-12" value="Iniciar Regristro">
-                </form>
+                </div>
             </div>
         </section>
     </main>
