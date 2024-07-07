@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las maravillas del Norte</title>
+
+    <link rel="icon" href="./imgs/empresa.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body class="grid-container">
+    <header class="navbar-area">
+        <div class="navbar">
+            <a href="index.html" class="item-nav"><img class="logo" src="./imgs/empresa.png" alt="logo"></a>
+            <nav class="nav-pc">
+                <a href="index.html" class="item-nav">Inicio</a>
+                <a href="index.html#SeccionViajes" class="item-nav">Nuestros Viajes</a> 
+                <a href="index.html#SeccionOpiniones" class="item-nav">Opiniones</a>
+                <a href="contacto.html#SeccionContactanos" class="item-nav">Contactanos</a>
+                <a href="contacto.html#SeccionTours" class="item-nav">Info de tours</a>
+                <a href="Login_register.html" class="item-nav">Acceder/Registrarme</a>
+            </nav>
+            <nav class="nav-movile">
+                <i class="fa-solid fa-bars icon-menu" id="icon-menu"></i>
+            </nav>
+
+        </div>
+
+    </header>    
+    <div class="nav-movile-popup">
+        <div class="nav-movile-izq">
+            <a href="index.html" class="item-nav-movile">Inicio</a>
+            <a href="index.html#SeccionViajes" class="item-nav-movile">Nuestros Viajes</a> 
+            <a href="index.html#SeccionOpiniones" class="item-nav-movile">Opiniones</a>
+            <a href="contacto.html#SeccionContactanos" class="item-nav-movile">Conocenos </a>
+            <a href="contacto.html#SeccionTours" class="item-nav-movile">Info de tours</a>
+            <a href="Login_register.html" class="item-nav-movile">Acceder/Registrarme</a>
+        </div>
+        <div class="nav-movile-der">
+            <i class="fa-solid fa-x" id="faxx2"></i>
+        </div>
+    </div>
+    <main class="content-area container-fluid">
+        <h3 class="titleContactenos"></h3>
+        <section id="Login_register" class="row">
+
+            <div class="col-6">
+                <h3 class="tituloSectionViajes">Iniciar sesión</h3>
+                <form class="container-fluid" id="Form" onsubmit="return validacionFormulario(event)">
+                    <div class="row fila">
+                        <label for="nombreID" class="col-6">Nombre de usuario: </label>
+                        <input type="text" name="username" id="username" class="col-6 textinp">
+                    </div>
+                    <div class="row fila">
+                        <label for="password" class="col-6">Contraseña: </label>
+                        <input type="text" name="password" id="password" class="col-6 textinp">
+                    </div>
+    
+                    <input type="submit" class="col-12" value="Acceder">
+                </form>
+            </div>
+            <div class="col-6">
+                <h3 class="tituloSectionViajes">Registrarme</h3>
+                <form class="container-fluid" id="Form2" onsubmit="return validacionFormulario(event)">
+                    <div class="row fila">
+                        <label for="nombreID" class="col-6">Nombre de usuario: </label>
+                        <input type="text" name="username" id="username2" class="col-6 textinp">
+                    </div>
+                    <div class="row fila">
+                        <label for="password" class="col-6">Contraseña: </label>
+                        <input type="text" name="password" id="password2" class="col-6 textinp">
+                    </div>
+    
+                    <input type="submit" class="col-12" value="Iniciar Regristro">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-area">
+        <div>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>Derechos reservados @2024</p>
+    </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/31818fb38f.js" crossorigin="anonymous"></script>
+    <script src="js/contactApp.js"></script>
+</body>
+
+</html>

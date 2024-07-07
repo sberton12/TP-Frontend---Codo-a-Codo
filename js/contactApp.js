@@ -5,6 +5,9 @@ const CORRECTO_COLOR = "#dee2e6";
 /*const FormContact = document.getElementById("Form");
 FormContact.onsubmit = validacionFormulario;
 */
+
+const URL_CONTACT = "http://localhost:3000/contact/formulario";
+
 //Validacion de campos obligatorios
 function validacionFormulario(event) {
   event.preventDefault(); 
@@ -24,19 +27,19 @@ function validacionFormulario(event) {
   } else {
     changeBorderColor(CORRECTO_COLOR, elementApellido);
   }
-  var elementEmail = document.getElementById("telefonoID");
-  if (!validarTelefono(elementEmail.value)) {
-    changeBorderColor(ERROR_COLOR, elementEmail);
-    error = 1;
-  }else {
-    changeBorderColor(CORRECTO_COLOR, elementEmail);
-  }
-  var elementCel = document.getElementById("emailID");
-  if (!validarEmail(elementCel.value)) {
+  var elementCel = document.getElementById("telefonoID");
+  if (!validarTelefono(elementCel.value)) {
     changeBorderColor(ERROR_COLOR, elementCel);
     error = 1;
   }else {
     changeBorderColor(CORRECTO_COLOR, elementCel);
+  }
+  var elementEmail = document.getElementById("emailID");
+  if (!validarEmail(elementEmail.value)) {
+    changeBorderColor(ERROR_COLOR, elementEmail);
+    error = 1;
+  }else {
+    changeBorderColor(CORRECTO_COLOR, elementEmail);
   }
 
   if (error) {
@@ -44,10 +47,45 @@ function validacionFormulario(event) {
     return false;
   } else {
     alert("Formulario enviado");
+
+    conexionBackendAPI(elementEmail.value)
+    .then(() => alert("salio bien"))
+    .catch( () => alert("salio mal"))
+    .finally( () => alert("Esta completo"));
+
     return true;
   }
 }
 
+function conexionBackendAPI(email) {
+  return new Promise((resolve, reject) => {
+
+      /// preparo un json para enviar al backend...
+      let data = {
+          "email":  email,
+          "type": "venta de producto",
+          "text": "Quiero saber sobre su producto, que precio tiene?"
+      }
+
+      //DATA es un objeto en javascript
+
+      // Request necesita convertir ese objeto en JSON...
+      let request = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+      }
+
+
+      fetch( URL_CONTACT , request )
+      .then((respuesta) => respuesta.json() )
+      .then( (res) => {
+          // Este res es la promesa de convertir la respuesta en json
+          console.log(res);
+      });
+
+  });
+}
 //No contiene numeros ni caracteres especiales
 function validarNombreYApellido(text) {
   const regex = /^[A-Za-z\s]+$/;
