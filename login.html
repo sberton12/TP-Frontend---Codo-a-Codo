@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las maravillas del Norte</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="icon" href="./imgs/empresa.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/31818fb38f.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="grid-container">
+    <header class="navbar-area">
+        <div class="navbar">
+            <a href="index.html" class="item-nav"><img class="logo" src="./imgs/empresa.png" alt="logo"></a>
+            <nav class="nav-pc">
+                <a href="index.html" class="item-nav">Inicio</a>
+                <a href="index.html#SeccionViajes" class="item-nav">Nuestros Viajes</a>
+                <a href="index.html#SeccionOpiniones" class="item-nav">Opiniones</a>
+                <a href="contacto.html#SeccionContactanos" class="item-nav">Contactanos</a>
+                <a href="contacto.html#SeccionTours" class="item-nav">Info de tours</a>
+            </nav>
+            <nav class="nav-movile">
+                <i class="fa-solid fa-bars icon-menu" id="icon-menu"></i>
+            </nav>
+        </div>
+
+    </header>
+    <section id="SeccionViajes">
+        <div class="marco center b1">
+            <h3 class="tituloSectionViajes">REGISTRATE</h3>
+        </div>
+        <div class="container-index">
+
+            <form class="container-fluid" id="Form" onsubmit="return validacionFormulario(event)">
+                <div class="row fila">
+                    <label for="nombreID" class="col-6">Nombre de usuario: </label>
+                    <input type="text" name="username" id="username" class="col-6 textinp">
+                </div>
+                <div class="row fila">
+                    <label for="password" class="col-6">Contraseña: </label>
+                    <input type="text" name="password" id="password" class="col-6 textinp">
+                </div>
+                
+                <input type="submit" value="ENVIAR">
+            </form>
+</div>
+
+<script src="js/login.js"></script>
+</body>
